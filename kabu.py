@@ -6,12 +6,15 @@ import matplotlib.pyplot as plt
 from pandas_datareader.yahoo.daily import YahooDailyReader
 from datetime import datetime
 
+code = st.text_input('米国株のティッカーシンボルを1銘柄だけ半角で入力、、Enter を押してください')
+st.write("例:Amazonなら、AMZN と入力"
+
 date_st = datetime(2010, 1, 1)
 date_fn = datetime(2021, 4, 1)
 
-df1 = YahooDailyReader('MSFT', date_st, date_fn).read()
+df1 = YahooDailyReader(code, date_st, date_fn).read()
 
-symbols = ['AAPL', 'MSFT', 'GOOGL']
+symbols = [code]
 
 dfs = [YahooDailyReader(symbol, date_st, date_fn).read() for symbol in symbols]
 
