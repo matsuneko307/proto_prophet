@@ -1,6 +1,6 @@
 numpy
 pandas
 matplotlib
-YahooDailyReader
+pandas_datareader
 Prophet
 streamlit
